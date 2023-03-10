@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+
+}
+#main{
+
+}
+#name{
+    display: flex;
+    justify-content: center;
+    margin-top: 25rem;
+    padding: 3rem;
+}
+#name input{
+    padding: 0 2rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    width: 20rem;
+    height: 4rem;
+}
+#temperature{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+
+}
