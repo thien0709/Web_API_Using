@@ -24,7 +24,8 @@ html{
     height: 4rem;
 }
 #temperature{
-    text-align: center;
+    display: flex;
+    justify-content: center;
     font-family: 'Courier New', Courier, monospace;
 
 }
