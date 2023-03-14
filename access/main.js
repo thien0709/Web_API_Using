@@ -1,22 +1,21 @@
 //Select 
-const input = document.querySelector('input');
+const inputGet = document.querySelector('#inputGet');
 const temp = document.querySelector('.number');
-value = input.value;
-//Call API
-const API_KEY = "cf07c0b75fe0d374f648ef9cc52fb730";
-const city = value;
+let cityName;
+let b;
+//Get value when enter
+window.onkeypress = function (event){
+    if(event.keyCode == 13){
+        //Get value input
+        cityName = inputGet.value;
+        // Call API
+        const API_KEY =`041b66d978aaa9fdcd80e2b063842130`;
+        var url = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=${API_KEY}&units=metric&lang=vi";
+        fetch(url)
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+        b = data;
+        console.log (b);
 
-fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&lang=vi`,
-{
-    headers: {
-      "Content-Type": "application/json",
-    },
-})
-.then((response) => response.json())
-.then((data) => console.log(data));
-window.onkeypress = (e){
-    if(e.key == "enter"){
-        console.log(city);
     }
 }
-// temp.innerText(data);
