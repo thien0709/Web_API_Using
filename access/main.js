@@ -10,7 +10,7 @@ window.onkeypress = function (event){
         cityName = inputGet.value;
         // Call API
         const API_KEY =`041b66d978aaa9fdcd80e2b063842130`;
-        var url = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=${API_KEY}&units=metric&lang=vi";
+        var url = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=041b66d978aaa9fdcd80e2b063842130&units=metric&lang=vi";
         fetch(url)
         .then((response) => response.json())
         .then((data) => console.log(data));
