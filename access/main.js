@@ -7,7 +7,7 @@ window.onkeypress = function (event){
     if(event.keyCode == 13){
         // Call API
         const API_KEY =`22e87aefe5b358c5e45fd150c7765eb6`;
-        var url = 'https://api.openweathermap.org/data/2.5/weather?q='+inputGet.value+'&appid=22e87aefe5b358c5e45fd150c7765eb6&units=metric&lang=vi';
+        var url = `https://api.openweathermap.org/data/2.5/weather?q=${inputGet.value}&appid=${API_KEY}&units=metric&lang=vi`;
         fetch(url)
         .then((response) => response.json())
         .then((data) =>{
