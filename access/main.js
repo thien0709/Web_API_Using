@@ -1,6 +1,9 @@
 //Select 
 const inputGet = document.querySelector('#inputGet');
 const temp = document.querySelector('.number');
+const descrip = document.querySelector('.description');
+const wind = document.querySelector('.wind-speed');
+const img = document.querySelector('.img img');
 let b;
 //Get value when enter
 window.onkeypress = function (event){
@@ -11,8 +14,15 @@ window.onkeypress = function (event){
         fetch(url)
         .then((response) => response.json())
         .then((data) =>{
+            console.log(data);
             var temperature = data['main']['temp'];
-            temp.innerHTML = temperature;
+            temp.innerHTML = `Nhiệt độ: ${temperature}°C`;    
+            var wind_speed = data['wind']['speed'];
+            wind.innerHTML = `Tốc độ gió: ${wind_speed}`;
+            var description = data['weather']['0']['description'];
+            descrip.innerHTML = description;
+            var icon = data['weather']['0']['icon'];
+            img.src = `https://openweathermap.org/img/wn/${icon}.png`;
         })
         .catch((err) => {
             alert("Hay nhap lai dia chi");

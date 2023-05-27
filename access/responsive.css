@@ -15,11 +15,12 @@
   
   /* Mobile */
   @media (max-width: 46.1875em) {
-    #name{
-        margin-top: 10rem;
+    #main{
+      width: 100vw;
     }
-    #temperature{
-        padding: 5rem 0;
+    #result{
+      width: 90%;
+      height: 20rem;
     }
 
   }

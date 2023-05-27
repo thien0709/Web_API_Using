@@ -4,17 +4,18 @@
     box-sizing: border-box;
 }
 html{
-    width: 100vw;
-    height: 100vh;
+
 }
 #main{
-
+    margin: auto;
+    width: 50vw;
+    height: 100vh;
 }
 #name{
     display: flex;
     justify-content: center;
-    margin-top: 25rem;
     padding: 3rem;
+    margin-bottom: 5rem;
 }
 #name input{
     padding: 0 2rem;
@@ -24,9 +25,26 @@ html{
     width: 20rem;
     height: 4rem;
 }
-#temperature{
+#result{
+    border-radius: 1rem;
+    margin: auto;
+    height: 40%;
+    background-color: #454545;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+  
+.temperature{
     display: flex;
     justify-content: center;
-    font-family: 'Courier New', Courier, monospace;
-
+    align-items: center;
+    color: #FFA559;
+}
+.wind-speed,.description,.img{
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: auto;
+    color: #FF6000;
 }
