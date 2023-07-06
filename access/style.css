@@ -26,11 +26,13 @@ html{
     height: 4rem;
 }
 #result{
+    transition:  cubic-bezier(.5,-.75,.7,2) .5s;
     border-radius: 1rem;
     margin: auto;
     height: 40%;
     background-color: #454545;
     display: grid;
+    width: 0;
     justify-content: center;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
